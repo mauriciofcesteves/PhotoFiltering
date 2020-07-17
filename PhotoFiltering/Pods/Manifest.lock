@@ -1,0 +1,22 @@
+PODS:
+  - RxSwift (4.5.0)
+  - SDWebImage (5.8.1):
+    - SDWebImage/Core (= 5.8.1)
+  - SDWebImage/Core (5.8.1)
+
+DEPENDENCIES:
+  - RxSwift (~> 4)
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - RxSwift
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
+
+PODFILE CHECKSUM: ce8aa9f0cdfc96f771fb28c34b46fa16331bcef7
+
+COCOAPODS: 1.9.3
