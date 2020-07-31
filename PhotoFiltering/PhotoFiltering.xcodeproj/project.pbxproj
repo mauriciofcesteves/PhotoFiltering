@@ -15,6 +15,7 @@
 		B69865D924C24D3300FB2E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69865D724C24D3300FB2E3C /* LaunchScreen.storyboard */; };
 		B69F1C9D24CF5F0A00E9B339 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F1C9C24CF5F0A00E9B339 /* PhotosCollectionViewController.swift */; };
 		B69F1C9F24D0A85600E9B339 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F1C9E24D0A85600E9B339 /* PhotoCollectionViewCell.swift */; };
+		B6E47D8124D1F54000D59C48 /* PhotoFilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E47D8024D1F54000D59C48 /* PhotoFilterManager.swift */; };
 		F63639AF1E5E694775F7471A /* Pods_PhotoFiltering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80F8A0FB65877A5B266AED0 /* Pods_PhotoFiltering.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		B69865E024C251AD00FB2E3C /* PhotoFilteringPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PhotoFilteringPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B69F1C9C24CF5F0A00E9B339 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		B69F1C9E24D0A85600E9B339 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		B6E47D8024D1F54000D59C48 /* PhotoFilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFilterManager.swift; sourceTree = "<group>"; };
 		E80F8A0FB65877A5B266AED0 /* Pods_PhotoFiltering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoFiltering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				B69865DA24C24D3300FB2E3C /* Info.plist */,
 				B69F1C9C24CF5F0A00E9B339 /* PhotosCollectionViewController.swift */,
 				B69F1C9E24D0A85600E9B339 /* PhotoCollectionViewCell.swift */,
+				B6E47D8024D1F54000D59C48 /* PhotoFilterManager.swift */,
 			);
 			path = PhotoFiltering;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				B69F1C9F24D0A85600E9B339 /* PhotoCollectionViewCell.swift in Sources */,
 				B69865CD24C24D2E00FB2E3C /* AppDelegate.swift in Sources */,
 				B69865CF24C24D2E00FB2E3C /* SceneDelegate.swift in Sources */,
+				B6E47D8124D1F54000D59C48 /* PhotoFilterManager.swift in Sources */,
 				B69F1C9D24CF5F0A00E9B339 /* PhotosCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@ import RxSwift
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var applyFilterButton: UIButton!
     
     //Prevent memory leak
     let disposeBag = DisposeBag()
@@ -29,8 +30,28 @@ class ViewController: UIViewController {
         }
         
         photosCVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
-            self?.imageView.image = photo
+            DispatchQueue.main.async {
+                self?.updateUI(with: photo)
+            }
         }).disposed(by: disposeBag)
+    }
+    
+    @IBAction func applyFilterImageTouched(_ sender: Any) {
+        guard let sourceImage = self.imageView.image else {
+            return
+        }
+        
+        PhotoFilterManager().applyFilter(to: sourceImage).subscribe(onNext: { filteredImage in
+            DispatchQueue.main.async {
+                self.imageView.image = filteredImage
+            }
+        }).disposed(by: disposeBag)
+        
+    }
+
+    private func updateUI(with photo: UIImage) {
+        self.imageView.image = photo
+        self.applyFilterButton.isHidden = false
     }
 }
 
