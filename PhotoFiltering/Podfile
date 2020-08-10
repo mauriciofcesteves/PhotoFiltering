@@ -8,5 +8,6 @@ target 'PhotoFiltering' do
   # Pods for PhotoFiltering
   
   pod 'SDWebImage'
-  pod 'RxSwift', '~> 4'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
 end
