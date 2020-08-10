@@ -3,7 +3,7 @@
 PhotoFiltering is an app that applies filtering to a selected picture from the Photos app.
 
 ## Highlights
-- The app is using RxSwift, it has a clean code and it's well-structured.
+- The app is using Reactive Programming with RxSwift, it has a clean code and it's well-structured.
 - The app has a collection view that presents all photos, after selecting, it's possible to apply a filter.
 
 ## Getting Started
