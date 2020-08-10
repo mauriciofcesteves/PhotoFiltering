@@ -1,4 +1,4 @@
-# FancyGallery App
+# PhotoFiltering App
 
 PhotoFiltering is an app that applies filtering to a selected picture from the Photos app.
 
