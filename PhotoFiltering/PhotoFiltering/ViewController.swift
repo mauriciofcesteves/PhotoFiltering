@@ -9,14 +9,14 @@
 import UIKit
 import RxSwift
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var applyFilterButton: UIButton!
-    
+
     //Prevent memory leak
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,29 +24,27 @@ class ViewController: UIViewController {
 
     //Is triggered when a navigation is happening
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         guard let navigationController = segue.destination as? UINavigationController, let photosCVC = navigationController.viewControllers.first as? PhotosCollectionViewController else {
             fatalError("Segue PhotosCollectionViewController was not found.")
         }
-        
+
         photosCVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
             DispatchQueue.main.async {
                 self?.updateUI(with: photo)
             }
         }).disposed(by: disposeBag)
     }
-    
+
     @IBAction func applyFilterImageTouched(_ sender: Any) {
         guard let sourceImage = self.imageView.image else {
             return
         }
-        
+
         PhotoFilterManager().applyFilter(to: sourceImage).subscribe(onNext: { filteredImage in
             DispatchQueue.main.async {
                 self.imageView.image = filteredImage
             }
         }).disposed(by: disposeBag)
-        
     }
 
     private func updateUI(with photo: UIImage) {
@@ -54,4 +52,3 @@ class ViewController: UIViewController {
         self.applyFilterButton.isHidden = false
     }
 }
-
